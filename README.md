@@ -1,26 +1,36 @@
-# QureHeal Website
+# QureHeal Marketing Website
 
-A responsive healthcare SaaS landing page created for QureHeal.com.
+Static marketing and SEO website for **QureHeal**.
 
-## Files
-- `index.html` — page content and structure
-- `styles.css` — responsive design and animations
-- `script.js` — mobile navigation, reveal effects, and demo form behavior
+## Run locally
 
-## Preview
-Open `index.html` in any modern web browser.
+```bash
+python -m http.server 8080
+```
 
-## Deploy
-You can deploy these files directly to:
-- Netlify
-- Vercel
-- GitHub Pages
-- Cloudflare Pages
-- Any standard web hosting service
+Open `http://localhost:8080`.
 
-## Before production launch
-1. Replace placeholder legal links.
-2. Connect the demo form to your backend, CRM, Formspree, HubSpot, or another form service.
-3. Add real company contact details.
-4. Add finalized privacy, security, and compliance claims only after legal/security review.
-5. Replace the vision quote with verified customer testimonials once available.
+## Publish to GitHub
+
+```bash
+git init
+git add .
+git commit -m "Initial QureHeal marketing website"
+git branch -M main
+git remote add origin https://github.com/<your-account>/qureheal-marketing.git
+git push -u origin main
+```
+
+## Cloudflare Pages
+
+- Framework preset: None
+- Build command: leave empty
+- Build output directory: /
+- Production branch: main
+
+
+## Website assistant
+
+The website includes a client-side QureHeal assistant that answers common marketing and product questions using predefined JavaScript responses.
+
+It does not send data to an external AI service and does not provide medical advice. To connect it to an AI backend later, replace the `findAnswer()` logic in `assets/js/main.js` with a secure server-side API call.
